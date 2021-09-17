@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(20, 20, 20);
+    overflow: hidden;
+    contain: content;
+}
+
+h1 {
+    color: rgb(211, 211, 211);
+    position: absolute;
+    z-index: 4;
+    height: 200px;
+    width: 500px;
+    top: 429px;
+    left: 95px;
+    transform: rotateX(-55deg);
+    font-size: 26px;
+}
+
+h1 span{
+    background: rgba(104, 69, 29, 0.11);
+    padding:3px 3px;
+    margin: 0 2px;
+    border: 1px solid rgba(168, 163, 88, 0.2);
+}
+
+.container {
+    position: relative;
+    margin: auto auto;
+    width: 700px;
+    height: 700px;
+    perspective: 600px;
+}
+
+.cube {
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transform: translateZ(-150px) rotateX(40deg);
+    position: absolute;
+}
+
+.mesa-cover {
+    /* background: linear-gradient(180deg, rgb(167, 0, 0), rgb(201, 0, 0)); */
+    background: rgba(85, 40, 13, 0.507);
+    background-position: center;
+    background-size: 800px;
+    width: 800px;
+    height: 900px;
+    top: -300px;
+    left: -100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    z-index: 0;
+}
+
+.mesa {
+    /* background: linear-gradient(180deg, rgb(167, 0, 0), rgb(201, 0, 0)); */
+    background: url('wood.jpg');
+    background-position: center;
+    background-size: 800px;
+    width: 800px;
+    height: 900px;
+    top: -300px;
+    left: -100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    z-index: -1;
+}
+
+.toalha-cover {
+    /* background: linear-gradient(180deg, rgb(116, 0, 0), rgb(2, 0, 0)); */
+    background: linear-gradient(180deg, rgba(53, 26, 0, 0.911) , 
+    rgba(20, 10, 0, 0.911)20%);
+    background-position: center;
+    background-size: 800px;
+    position: absolute;
+    height: 300px;
+    width: 601px;
+    top: 580px;
+    left: 12px;
+    transform: rotateX(-55deg);
+    z-index: 5;
+}
+
+.mesa-toalha {
+    /* background: linear-gradient(180deg, rgb(116, 0, 0), rgb(2, 0, 0)); */
+    background: url('wood.jpg');
+    background-position: center;
+    background-size: 800px;
+    position: absolute;
+    height: 300px;
+    width: 601px;
+    top: 580px;
+    left: 12px;
+    transform: rotateX(-55deg);
+    z-index: 2;
+}
+
+.tabuleiro {
+    background: linear-gradient(180deg, rgb(0, 0, 0), rgb(8, 8, 8));
+    position: absolute;
+    height: 550px;
+    width: 520px;
+    top: -150px;
+    left: 40px;
+}
+
+.tabuleiro-sombra {
+    background: linear-gradient(180deg, rgb(0, 0, 0), rgb(0, 0, 0));
+    position: absolute;
+    height: 100px;
+    width: 477px;
+    top: 410px;
+    left: 66px;
+    transform: rotateX(-55deg);
+    z-index: 3;
+}
+
+
+.jogo {
+    display: flex;
+    width: 480px;
+    height: 480px;
+    top: -110px;
+    left: 60px;
+    position: absolute;
+    background: rgb(248, 248, 248);
+}
+
+
+.quadrado {
+    width: 160px;
+    height: 160px;
+    border: 1px solid rgba(224, 224, 224, 0.6);
+    text-align: center;
+}
+
+.jogadores {
+    position: absolute;
+    z-index: 4;
+    font-size: 160px;
+    font-weight: 600;
+    top: 120px;
+}
+
+#jogador1{
+    position: absolute;
+    right: -690px;
+}
+
+.active {
+    color: rgb(255, 243, 180);
+    text-shadow: 1px 1px 20px #fff;
+}
+
+#jogador2{
+    position: absolute;
+    left: -97px;
+}
+
+.jogadorX {
+    color:rgb(75, 63, 189);
+    text-shadow: #444 1px 5px 4px;
+}
+
+.jogadorO {
+    color:rgb(125, 214, 199);
+    text-shadow: #444 1px 5px 4px;
+
+}
+
+.jogadorO, .jogadorX {
+    font-size: 120px;
+    font-weight: 800;
+}
+
+.vencedor-container {
+    position: absolute;
+    z-index: 4;
+    bottom: -180px;
+    padding: 15px 25px;
+    background: rgb(12, 12, 12);
+    font-size: 20px;
+    left: 110px;
+    width: 400px;
+    text-align: center;
+}
+
+h3 {
+    color: rgb(127, 207, 221);
+    text-shadow: rgb(100, 60, 0) 1px 2px 4px;
+    padding-bottom: 10px;
+}
+
+#vencedor span {
+    background: rgba(235, 168, 168, 0.199);
+    padding:2px 5px;
+    margin: 0 2px;
+    border: 1px solid rgba(168, 131, 88, 0.2);
+    color: rgb(134, 188, 209);
+    font-weight: 800;
+}
+
+
+.vencedor-sombra {
+    background: linear-gradient(180deg, rgb(0, 0, 0), rgb(14, 0, 0));
+    position: absolute;
+    height: 20px;
+    width: 395px;
+    top: 577px;
+    left: 113px;
+    transform: rotateX(-55deg);
+    z-index: 6;
+}
+
+.box-botao {
+    position: absolute;
+    z-index: 4;
+    bottom: -160px;
+    right: -280px;
+}
+
+#botao {
+    border-radius: 60%;
+    padding: 14px;
+    font-size: 24px;
+    background: radial-gradient(rgba(207, 0, 0, 0.836) 60%,    rgba(255, 122, 120, 0.836));
+    border: none;
+
+}
+
+.botao-sombra {
+    border-radius: 45%;
+    position: absolute;
+    height: 65px;
+    width: 155px;
+    z-index: 4;
+    bottom: -169px;
+    right: -276px;
+    background-color: rgb(68, 0, 0);
+}
+
+#botao:active {
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    transform: all 0.7  s ease-in;
+
+}
